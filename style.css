@@ -1,0 +1,1801 @@
+ /* =====================================================
+   TRAVEL BLOG WEBSITE
+   COMPLETE CSS
+===================================================== */
+
+
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =====================================================
+   GENERAL SETTINGS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f8fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   HEADER / NAVBAR
+===================================================== */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #006994,
+        #008cba,
+        #00a6a6
+    );
+
+    color: white;
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Website Logo */
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: white;
+    color: #0077a3;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 30, 45, 0.55),
+            rgba(0, 30, 45, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1464061884326-64f6ebd57f83?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 850px;
+    padding: 30px;
+    animation: fadeUp 1.2s ease;
+}
+
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 60px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        2px 3px 10px rgba(0,0,0,0.5);
+}
+
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+
+    color: #f5f5f5;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #ff7a00;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+    background: #ff9800;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+section {
+    padding: 70px 7%;
+}
+
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #006994;
+
+    margin-bottom: 35px;
+}
+
+
+section h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background: #ff7a00;
+
+    margin: 12px auto;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   WELCOME SECTION
+===================================================== */
+
+.welcome {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0f7fa,
+            #ffffff
+        );
+
+    text-align: center;
+}
+
+
+.welcome p {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    color: #546e7a;
+}
+
+
+/* =====================================================
+   DESTINATION SECTION
+===================================================== */
+
+.destination-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef8fb
+        );
+}
+
+
+/* International section */
+
+.destination-section:nth-of-type(2) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            #ffffff
+        );
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+#searchBox {
+
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto 45px;
+
+    padding: 15px 20px;
+
+    border: 2px solid #00a6a6;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: white;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+
+#searchBox:focus {
+
+    border-color: #ff7a00;
+
+    box-shadow:
+        0 0 0 4px rgba(255,122,0,0.15);
+}
+
+
+/* =====================================================
+   CARD CONTAINER
+===================================================== */
+
+.card-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   DESTINATION CARD
+===================================================== */
+
+.card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    position: relative;
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.18);
+}
+
+
+/* Card Image */
+
+.card img {
+
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s ease;
+}
+
+
+.card:hover img {
+
+    transform: scale(1.08);
+}
+
+
+/* Card content */
+
+.card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 23px;
+
+    color: #006994;
+
+    padding:
+        18px 20px 5px;
+}
+
+
+.card p {
+
+    padding:
+        0 20px;
+
+    color: #607d8b;
+
+    font-size: 14px;
+}
+
+
+/* Read More */
+
+.card a {
+
+    display: inline-block;
+
+    margin:
+        15px 20px 20px;
+
+    padding:
+        9px 18px;
+
+    background: #008cba;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.card a:hover {
+
+    background: #ff7a00;
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   DESTINATION DETAIL PAGE
+===================================================== */
+
+.destination-details {
+
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.10);
+}
+
+
+.destination-details h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    color: #006994;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.destination-details p {
+
+    font-size: 17px;
+
+    color: #546e7a;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   MAIN DESTINATION IMAGE
+===================================================== */
+
+.main-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    margin: 25px 0;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.18);
+}
+
+
+/* =====================================================
+   PHOTO GALLERY
+===================================================== */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+
+.gallery img {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.gallery img:hover {
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   ABOUT DESTINATION
+===================================================== */
+
+.about-destination {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0f7fa,
+            #ffffff
+        );
+
+    padding: 30px;
+
+    border-left:
+        5px solid #00a6a6;
+
+    border-radius: 12px;
+
+    margin: 30px 0;
+}
+
+
+.about-destination h2 {
+
+    text-align: left;
+
+    margin-bottom: 15px;
+
+    font-size: 28px;
+}
+
+
+.about-destination h2::after {
+
+    margin:
+        10px 0;
+}
+
+
+ /* =====================================================
+   LOGIN PAGE
+===================================================== */ 
+
+ .login-container {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0f7fa,
+            #fff3e0
+        );
+}
+
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+
+.login-box h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: #006994;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    margin: 10px 0;
+
+    border:
+        1px solid #b0bec5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+}
+
+
+.login-box input:focus {
+
+    border-color: #00a6a6;
+
+    box-shadow:
+        0 0 0 3px rgba(0,166,166,0.12);
+}
+
+
+.login-box button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #008cba,
+            #00a6a6
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.login-box button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.2);
+} 
+
+/* =====================================================
+   SOCIAL ICON STYLE
+===================================================== */
+
+.social-icons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+.social-icons a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover {
+
+    background: #ff7a00;
+
+    transform: translateY(-4px);
+} 
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #e0f2f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            #008cba,
+            #00a6a6
+        );
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #ff7a00;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px 5%;
+    }
+
+
+    header h1 {
+
+        font-size: 25px;
+    }
+
+
+    nav {
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    nav a {
+
+        font-size: 14px;
+
+        padding: 6px 10px;
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+
+    section {
+
+        padding: 50px 5%;
+    }
+
+
+    section h2 {
+
+        font-size: 30px;
+    }
+
+
+    .card-container {
+
+        grid-template-columns:
+            repeat(1, 1fr);
+
+        gap: 25px;
+    }
+
+
+    .main-image {
+
+        height: 280px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .gallery img {
+
+        height: 150px;
+    }
+
+
+    .destination-details {
+
+        margin: 25px 5%;
+
+        padding: 20px;
+    }
+
+
+    .destination-details h1 {
+
+        font-size: 32px;
+    }
+
+
+    .login-box {
+
+        margin: 20px;
+
+        padding: 30px 20px;
+    }
+
+
+    .contact-container {
+
+        margin: 25px 5%;
+
+        padding: 25px 20px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+
+        font-size: 32px;
+    }
+
+
+    .hero p {
+
+        font-size: 15px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+
+
+    .gallery img {
+
+        height: 200px;
+    }
+
+
+    .card img {
+
+        height: 220px;
+    }
+}
+
+/* =====================================================
+   SPECIAL LOGIN PAGE DESIGN
+===================================================== */
+
+.login-page {
+
+    min-height: 80vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #f4f8fb;
+
+    padding: 45px 7%;
+}
+
+
+/* LEFT LOGIN IMAGE */
+
+.login-image {
+
+    min-height: 600px;
+
+    border-radius: 25px 0 0 25px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 40, 60, 0.45),
+            rgba(0, 40, 60, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 45px;
+
+    color: white;
+}
+
+
+.login-image-content h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+.login-image-content p {
+
+    font-size: 16px;
+
+    max-width: 450px;
+
+    color: #f5f5f5;
+}
+
+
+/* RIGHT LOGIN AREA */
+
+.login-form-area {
+
+    background: white;
+
+    border-radius: 0 25px 25px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+.login-form {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    text-align: center;
+}
+
+
+.login-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00a6a6,
+            #008cba
+        );
+
+    font-size: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 140, 186, 0.25);
+}
+
+
+.login-form h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: #006994;
+
+    font-size: 34px;
+
+    margin-bottom: 5px;
+}
+
+
+.login-subtitle {
+
+    color: #78909c;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.login-form form {
+
+    text-align: left;
+}
+
+
+.login-form form > label {
+
+    display: block;
+
+    color: #37474f;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+}
+
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid #e0e7eb;
+
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+
+    border-color: #00a6a6;
+
+    box-shadow:
+        0 0 0 4px rgba(0, 166, 166, 0.10);
+}
+
+
+/* LOGIN OPTIONS */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 15px 0 20px;
+
+    font-size: 13px;
+}
+
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #607d8b;
+}
+
+
+.remember input {
+
+    accent-color: #008cba;
+}
+
+
+.login-options a {
+
+    color: #008cba;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.login-options a:hover {
+
+    color: #ff7a00;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #008cba,
+            #00a6a6
+        );
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 7px 18px rgba(0, 140, 186, 0.25);
+}
+
+
+.login-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 140, 186, 0.30);
+}
+
+
+/* OR */
+
+.or-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #90a4ae;
+
+    font-size: 12px;
+}
+
+
+.or-line::before,
+.or-line::after {
+
+    content: "";
+
+    height: 1px;
+
+    background: #e0e7eb;
+
+    flex: 1;
+}
+
+
+.new-user {
+
+    text-align: center;
+
+    color: #78909c;
+
+    font-size: 14px;
+}
+
+
+.new-user a {
+
+    color: #008cba;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.new-user a:hover {
+
+    color: #ff7a00;
+}
+
+
+
+/* =====================================================
+   SPECIAL CONTACT PAGE
+===================================================== */
+
+.contact-page {
+
+    min-height: 80vh;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    padding: 50px 7%;
+
+    gap: 0;
+
+    background: #f3f8fa;
+}
+
+
+/* CONTACT LEFT */
+
+.contact-info {
+
+    min-height: 650px;
+
+    border-radius: 25px 0 0 25px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 55, 75, 0.75),
+            rgba(0, 110, 130, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+.contact-overlay {
+
+    padding: 55px 45px;
+}
+
+
+.contact-info h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-info > .contact-overlay > p {
+
+    color: #e0f7fa;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+}
+
+
+/* CONTACT DETAILS */
+
+.contact-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.contact-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s;
+}
+
+
+.contact-item:hover {
+
+    background: rgba(255,255,255,0.20);
+
+    transform: translateX(5px);
+}
+
+
+.contact-item > span {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.18);
+
+    font-size: 22px;
+}
+
+
+.contact-item h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 3px;
+}
+
+
+.contact-item p {
+
+    font-size: 13px;
+
+    color: #d9f5f8;
+}
+
+
+
+/* CONTACT RIGHT */
+
+.contact-form-section {
+
+    background: white;
+
+    border-radius: 0 25px 25px 0;
+
+    padding: 50px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.contact-form-box {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.contact-form-box h2 {
+
+    text-align: left;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #006994;
+
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+
+
+.contact-form-box h2::after {
+
+    display: none;
+}
+
+
+.contact-form-box > p {
+
+    color: #78909c;
+
+    margin-bottom: 30px;
+}
+
+
+/* FORM ROW */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #37474f;
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid #e4eaed;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #00a6a6;
+
+    box-shadow:
+        0 0 0 4px rgba(0,166,166,0.10);
+}
+
+
+.form-group textarea {
+
+    height: 150px;
+
+    resize: vertical;
+}
+
+
+/* SEND BUTTON */
+
+.send-message-btn {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7a00,
+            #ff9d3d
+        );
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 7px 18px rgba(255,122,0,0.22);
+}
+
+
+.send-message-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(255,122,0,0.30);
+}
+
+
+
+/* =====================================================
+   LOGIN + CONTACT MOBILE DESIGN
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .login-page {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px 5%;
+    }
+
+
+    .login-image {
+
+        min-height: 350px;
+
+        border-radius: 25px 25px 0 0;
+
+        padding: 30px;
+    }
+
+
+    .login-form-area {
+
+        border-radius: 0 0 25px 25px;
+
+        padding: 35px 25px;
+    }
+
+
+    .contact-page {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px 5%;
+    }
+
+
+    .contact-info {
+
+        min-height: 500px;
+
+        border-radius: 25px 25px 0 0;
+    }
+
+
+    .contact-form-section {
+
+        border-radius: 0 0 25px 25px;
+
+        padding: 35px 25px;
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .login-image-content h2 {
+
+        font-size: 32px;
+    }
+
+
+    .login-form h1 {
+
+        font-size: 28px;
+    }
+
+
+    .contact-info h1 {
+
+        font-size: 32px;
+    }
+
+
+    .contact-overlay {
+
+        padding: 35px 25px;
+    }
+
+
+    .contact-form-box h2 {
+
+        font-size: 29px;
+    }
+
+}
